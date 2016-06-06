@@ -1,0 +1,58 @@
+﻿  *{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background-color: white;
+  }
+ .fly-in-text{
+    list-style: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-family: "courier new";
+    letter-spacing: 5px;
+    word-spacing: 6px
+  }
+      
+  .fly-in-text li{
+    display: inline-block;
+    margin-right: 50px;
+    font-weight:400;
+    font-size: 4em;
+    color: black;
+    opacity: 1;
+    transition: all 2.5s ease;
+  }
+  .fly-in-text li:last-child{
+      margin-right: 0;
+  }
+  .fly-in-text.hidden li{
+      opacity:0;
+  }
+
+
+  .fly-in-text.hidden li:nth-child(1) {
+    transform: translateX(-200px) translateY(-200px);
+  }
+
+  .fly-in-text.hidden li:nth-child(2) {
+    transform: translateX(20px) translateY(200px);
+  }
+
+  .fly-in-text.hidden li:nth-child(3) {
+    transform: translateX(300px) translateY(200px);
+  }
+
+  #loginform{
+
+  }
+  #redheart{
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -50px;
+    transition: all 2.8s ease;
+  }
