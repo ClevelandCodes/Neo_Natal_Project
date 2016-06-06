@@ -1,0 +1,240 @@
+﻿@model Neo_Natal.Models.Survey
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Survey</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Client.first_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client.first_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.risk_score)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.risk_score)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q1_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q1_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q2_zip_code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q2_zip_code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q3_race)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q3_race)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q4_ward)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q4_ward)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q5_first_child)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q5_first_child)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q6_prem_birth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q6_prem_birth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q7_obgyn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q7_obgyn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q8_age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q8_age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q9_stress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q9_stress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q10_smoker)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q10_smoker)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q11_fam_smoker)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q11_fam_smoker)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q12_alcohol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q12_alcohol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q13_fam_alcohol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q13_fam_alcohol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q14_fam_drug)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q14_fam_drug)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q15_drug)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q15_drug)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q16_safe_nbhood)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q16_safe_nbhood)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q17_safe_home)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q17_safe_home)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q18_illness)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q18_illness)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q19_transport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q19_transport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q20_internet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q20_internet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q21_mob_internet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q21_mob_internet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q22_diet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q22_diet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q23_gov_assist)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q23_gov_assist)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q24_rel_income)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q24_rel_income)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Q25_education)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Q25_education)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

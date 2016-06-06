@@ -1,0 +1,189 @@
+﻿@model IEnumerable<Neo_Natal.Models.Survey>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.first_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.risk_score)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q1_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q2_zip_code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q3_race)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q4_ward)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q5_first_child)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q6_prem_birth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q7_obgyn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q8_age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q9_stress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q10_smoker)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q11_fam_smoker)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q12_alcohol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q13_fam_alcohol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q14_fam_drug)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q15_drug)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q16_safe_nbhood)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q17_safe_home)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q18_illness)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q19_transport)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q20_internet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q21_mob_internet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q22_diet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q23_gov_assist)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q24_rel_income)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Q25_education)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.first_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.risk_score)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q1_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q2_zip_code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q3_race)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q4_ward)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q5_first_child)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q6_prem_birth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q7_obgyn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q8_age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q9_stress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q10_smoker)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q11_fam_smoker)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q12_alcohol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q13_fam_alcohol)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q14_fam_drug)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q15_drug)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q16_safe_nbhood)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q17_safe_home)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q18_illness)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q19_transport)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q20_internet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q21_mob_internet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q22_diet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q23_gov_assist)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q24_rel_income)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Q25_education)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.client_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.client_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.client_id })
+        </td>
+    </tr>
+}
+
+</table>

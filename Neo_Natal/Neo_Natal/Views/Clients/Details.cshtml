@@ -1,0 +1,122 @@
+﻿@model Neo_Natal.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Client</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.HealthWorker.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealthWorker.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.first_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.first_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.last_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.last_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ethnicity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ethnicity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.street_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.street_number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.street_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.street_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.zip_code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zip_code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.county)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.county)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ward)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ward)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
