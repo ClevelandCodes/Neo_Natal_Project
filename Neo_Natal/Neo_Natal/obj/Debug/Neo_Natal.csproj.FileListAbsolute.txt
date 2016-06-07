@@ -230,6 +230,6 @@ C:\Users\Keaunna\Documents\GitHub\Neo_Natal\Neo_Natal\Neo_Natal\bin\Microsoft.Ow
 C:\Users\Keaunna\Documents\GitHub\Neo_Natal\Neo_Natal\Neo_Natal\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\Keaunna\Documents\GitHub\Neo_Natal\Neo_Natal\Neo_Natal\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\Keaunna\Documents\GitHub\Neo_Natal\Neo_Natal\Neo_Natal\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\Keaunna\Documents\GitHub\Neo_Natal\Neo_Natal\Neo_Natal\obj\Debug\Neo_Natal.csprojResolveAssemblyReference.cache
 C:\Users\Keaunna\Documents\GitHub\Neo_Natal\Neo_Natal\Neo_Natal\obj\Debug\Neo_Natal.dll
 C:\Users\Keaunna\Documents\GitHub\Neo_Natal\Neo_Natal\Neo_Natal\obj\Debug\Neo_Natal.pdb
+C:\Users\Keaunna\Documents\GitHub\Neo_Natal\Neo_Natal\Neo_Natal\obj\Debug\Neo_Natal.csprojResolveAssemblyReference.cache

@@ -17,7 +17,15 @@ namespace Neo_Natal.Controllers
         // GET: HealthWorkers
         public ActionResult Index()
         {
-            return View(db.HealthWorkers.ToList());
+            ViewBag.Clients = db.Clients.ToList(); //later <--get current HealthWorker 
+            return View(db.HealthWorkers.ToList()); //take out later 
+
+        }
+
+        //GET PARTIAL VIEW HealthWorkers/Index
+        public ViewResult _ClientInfo()
+        {
+            return View("_ClientInfo");
         }
 
         // GET: HealthWorkers/Details/5

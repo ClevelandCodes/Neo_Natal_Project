@@ -4,43 +4,61 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>CLIENT</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            HealthWorker
-        </th>
-    </tr>
-</table>
 
 <table class="table">
     <tr>
+        <th>
+            HealthWorker ID
+        </th>
         <th>
             First Name
         </th>
         <th>
             Last Name
         </th>
-</tr>
+        <th>
+            Risk Score
+        </th>
+    </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.HealthWorker.username)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.first_name)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.last_name)
         </td>
+       <!-- <td>
+           risk_score
+        </td>-->
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) 
+            @Html.ActionLink("Details", "Details", new { id=item.id }) 
             @Html.ActionLink("Delete", "Delete", new { id=item.id })
         </td>
     </tr>
 }
 
 </table>
+
+<p>@Html.ActionLink("Go Back", "Index", "HealthWorkers")</p>
+
+<div id="Partial">
+    @foreach (var item in Model)
+    {
+        <table>
+            <tr>
+                @Html.Partial("_ClientInfo", item)
+            </tr>
+        </table>
+    }
+</div>

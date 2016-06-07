@@ -1,0 +1,16 @@
+﻿@model Neo_Natal.Models.Client
+
+
+<td>
+    @Html.DisplayFor(model => model.first_name)
+</td>
+
+<td>
+    @Html.DisplayFor(model => model.last_name)
+</td>
+<td>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Details", "Details", new { id = Model.id }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.id })
+</td>
+<!-- Partial view markup -->

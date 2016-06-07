@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<Neo_Natal.Models.HealthWorker>
 
+
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Home Page</h2>
+<h2>HEALTHWORKER</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,13 +13,11 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.username)
+            Username
         </th>
-       <!--<th>
-            @Html.DisplayNameFor(model => model.password)
-        </th>--> 
+       
         <th>
-            @Html.DisplayNameFor(model => model.email)
+            Email
         </th>
         <th></th>
     </tr>
@@ -41,7 +40,21 @@
         </td>
     </tr>
 }
-
 </table>
 
 <p>@Html.ActionLink("Client List", "Index", "Clients")</p>
+
+<!--CLIENTS
+First Name: [gets populated by Client model]
+Last Name:-->
+
+@foreach (var item in ViewBag.Clients)
+{
+    <tr id="Partial">
+       
+    </tr>
+}
+
+
+
+<p>@Html.ActionLink("Create New Client", "Create", "Clients")</p>

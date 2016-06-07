@@ -21,7 +21,7 @@ namespace Neo_Natal.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("Neo_NatalDB", throwIfV1Schema: false)
         {
         }
 
