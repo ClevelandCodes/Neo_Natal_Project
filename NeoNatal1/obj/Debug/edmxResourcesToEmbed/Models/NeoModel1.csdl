@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="neo_natalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="client">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOB" Type="Int32" Nullable="false" />
+    <Property Name="street_number" Type="Int32" Nullable="false" />
+    <Property Name="street_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="zip_code" Type="Int32" Nullable="false" />
+    <Property Name="county" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ward" Type="Int32" Nullable="false" />
+    <Property Name="phone_number" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="health_worker_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="health_worker" Relationship="Self.FK_client_health_worker" FromRole="client" ToRole="health_worker" />
+    <NavigationProperty Name="health_worker1" Relationship="Self.FK_health_worker_client" FromRole="client" ToRole="health_worker" />
+    <NavigationProperty Name="surveys" Relationship="Self.FK_survey_client" FromRole="client" ToRole="survey" />
+  </EntityType>
+  <EntityType Name="health_worker">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="client_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="clients" Relationship="Self.FK_client_health_worker" FromRole="health_worker" ToRole="client" />
+    <NavigationProperty Name="client" Relationship="Self.FK_health_worker_client" FromRole="health_worker" ToRole="client" />
+    <NavigationProperty Name="surveys" Relationship="Self.FK_survey_health_worker" FromRole="health_worker" ToRole="survey" />
+  </EntityType>
+  <EntityType Name="survey">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="health_worker_id" Type="Int32" Nullable="false" />
+    <Property Name="client_id" Type="Int32" Nullable="false" />
+    <Property Name="question_1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="quesiton_2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_4" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_5" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_6" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_7" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_8" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_9" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_10" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_11" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_12" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_13" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_14" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_15" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_16" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_17" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_18" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_19" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_20" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="quesiton_21" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_22" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="quesiton_23" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_24" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="question_25" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="client" Relationship="Self.FK_survey_client" FromRole="survey" ToRole="client" />
+    <NavigationProperty Name="health_worker" Relationship="Self.FK_survey_health_worker" FromRole="survey" ToRole="health_worker" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_client_health_worker">
+    <End Role="health_worker" Type="Self.health_worker" Multiplicity="1" />
+    <End Role="client" Type="Self.client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="health_worker">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="client">
+        <PropertyRef Name="health_worker_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_health_worker_client">
+    <End Role="client" Type="Self.client" Multiplicity="1" />
+    <End Role="health_worker" Type="Self.health_worker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="health_worker">
+        <PropertyRef Name="client_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_survey_client">
+    <End Role="client" Type="Self.client" Multiplicity="1" />
+    <End Role="survey" Type="Self.survey" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="client">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="survey">
+        <PropertyRef Name="client_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_survey_health_worker">
+    <End Role="health_worker" Type="Self.health_worker" Multiplicity="1" />
+    <End Role="survey" Type="Self.survey" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="health_worker">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="survey">
+        <PropertyRef Name="health_worker_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="neo_natalEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="clients" EntityType="Self.client" />
+    <EntitySet Name="health_worker" EntityType="Self.health_worker" />
+    <EntitySet Name="surveys" EntityType="Self.survey" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_client_health_worker" Association="Self.FK_client_health_worker">
+      <End Role="health_worker" EntitySet="health_worker" />
+      <End Role="client" EntitySet="clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_health_worker_client" Association="Self.FK_health_worker_client">
+      <End Role="client" EntitySet="clients" />
+      <End Role="health_worker" EntitySet="health_worker" />
+    </AssociationSet>
+    <AssociationSet Name="FK_survey_client" Association="Self.FK_survey_client">
+      <End Role="client" EntitySet="clients" />
+      <End Role="survey" EntitySet="surveys" />
+    </AssociationSet>
+    <AssociationSet Name="FK_survey_health_worker" Association="Self.FK_survey_health_worker">
+      <End Role="health_worker" EntitySet="health_worker" />
+      <End Role="survey" EntitySet="surveys" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

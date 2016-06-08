@@ -1,0 +1,51 @@
+﻿@model IEnumerable<NeoNatal1.Models.health_worker>
+
+@{
+    ViewBag.Title = "Healthcare Worker";
+}
+
+<h2>[HealthCare Worker's Name(?)]</h2>
+
+<p>
+    @Html.ActionLink("Create/Register Patient", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Patients Name/ID
+        </th>
+        <th>
+            Date Registered
+        </th>
+        <th>
+            Risk Analysis Score
+        </th>
+        <th>
+            @Html.ActionLink("View Survey Results", "Details","Controllers/surveys")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.client.first_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

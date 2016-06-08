@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="neo_natalModelStoreContainer" CdmEntityContainer="neo_natalEntities">
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="neo_natalModel.client">
+        <MappingFragment StoreEntitySet="client">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="street_number" ColumnName="street_number" />
+          <ScalarProperty Name="street_name" ColumnName="street_name" />
+          <ScalarProperty Name="zip_code" ColumnName="zip_code" />
+          <ScalarProperty Name="county" ColumnName="county" />
+          <ScalarProperty Name="ward" ColumnName="ward" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="health_worker_id" ColumnName="health_worker_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="health_worker">
+      <EntityTypeMapping TypeName="neo_natalModel.health_worker">
+        <MappingFragment StoreEntitySet="health_worker">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="surveys">
+      <EntityTypeMapping TypeName="neo_natalModel.survey">
+        <MappingFragment StoreEntitySet="survey">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="health_worker_id" ColumnName="health_worker_id" />
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="question_1" ColumnName="question_1" />
+          <ScalarProperty Name="quesiton_2" ColumnName="quesiton_2" />
+          <ScalarProperty Name="question_3" ColumnName="question_3" />
+          <ScalarProperty Name="question_4" ColumnName="question_4" />
+          <ScalarProperty Name="question_5" ColumnName="question_5" />
+          <ScalarProperty Name="question_6" ColumnName="question_6" />
+          <ScalarProperty Name="question_7" ColumnName="question_7" />
+          <ScalarProperty Name="question_8" ColumnName="question_8" />
+          <ScalarProperty Name="question_9" ColumnName="question_9" />
+          <ScalarProperty Name="question_10" ColumnName="question_10" />
+          <ScalarProperty Name="question_11" ColumnName="question_11" />
+          <ScalarProperty Name="question_12" ColumnName="question_12" />
+          <ScalarProperty Name="question_13" ColumnName="question_13" />
+          <ScalarProperty Name="question_14" ColumnName="question_14" />
+          <ScalarProperty Name="question_15" ColumnName="question_15" />
+          <ScalarProperty Name="question_16" ColumnName="question_16" />
+          <ScalarProperty Name="question_17" ColumnName="question_17" />
+          <ScalarProperty Name="question_18" ColumnName="question_18" />
+          <ScalarProperty Name="question_19" ColumnName="question_19" />
+          <ScalarProperty Name="question_20" ColumnName="question_20" />
+          <ScalarProperty Name="quesiton_21" ColumnName="quesiton_21" />
+          <ScalarProperty Name="question_22" ColumnName="question_22" />
+          <ScalarProperty Name="quesiton_23" ColumnName="quesiton_23" />
+          <ScalarProperty Name="question_24" ColumnName="question_24" />
+          <ScalarProperty Name="question_25" ColumnName="question_25" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="neo_natalModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

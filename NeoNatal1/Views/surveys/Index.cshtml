@@ -1,0 +1,190 @@
+﻿@model IEnumerable<NeoNatal1.Models.survey>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")    
+        @Html.ActionLink("Delete", "Create")    
+        @Html.ActionLink("Update", "Create")
+    </p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.question_1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quesiton_2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_11)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_12)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_13)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_14)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_15)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_16)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_17)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_18)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_19)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_20)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quesiton_21)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_22)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quesiton_23)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_24)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.question_25)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.client.first_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.health_worker.username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quesiton_2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_11)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_12)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_13)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_14)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_15)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_16)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_17)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_18)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_19)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_20)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quesiton_21)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_22)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quesiton_23)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_24)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question_25)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.client.first_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.health_worker.username)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

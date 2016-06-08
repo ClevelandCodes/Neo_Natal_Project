@@ -1,0 +1,101 @@
+﻿
+        body {
+            background-color: #363e4e;
+            width: 100%;
+        }
+
+        .fly-in-text {
+            list-style: none;
+            position: fixed;
+            left: 33.2%;
+            top: 35%;
+            word-spacing: 2px;
+            letter-spacing: 8px;
+        }
+
+        /*.fly-in-text li {
+          display: inline-block;
+          margin-right: 50px; 
+          font-family: Century Gothic;
+          font-weight: 300;
+          font-size: 4em;
+          color: #25b8dc;
+          opacity: 1;
+          transition: all 2.5s ease;
+        }*/
+        .fly-in-text li {
+          display: inline-block;
+          margin-right: 50px;
+          position: static;
+          font-family: Century Gothic;
+          font-weight: 300;
+          font-size: 4em;
+          color: #25b8dc;
+          opacity: 1;
+          transition: all 2.5s ease;
+        }
+
+        .fly-in-text li:last-child {
+           margin-right: 0;
+        }
+
+        .fly-in-text.hidden1 li {
+           opacity: 0;
+           word-spacing: 5px;
+        }
+
+        .fly-in-text.hidden1 li:nth-child(1) {
+            transform: translateX(-200%) translateY(-200%);
+        }
+
+        .fly-in-text.hidden1 li:nth-child(2) {
+            transform: translateX(-70%) translateY(-90%);
+        }
+
+        .fly-in-text.hidden1 li:nth-child(3) {
+            transform: translateX(200%) translateY(200%);
+        }
+
+        .btn-group{
+            position:fixed;
+            top: 65%;
+            left: 43.4%;
+        }
+
+        .btn{
+            color: ;
+            word-spacing: 35px;
+        }
+
+        .btn p{
+            display:inline;
+            font-size: 1.5em;
+        }
+
+        .glyphicon-heart-empty {
+            color:deeppink;
+            float:left;
+            opacity: .02;
+            font-size: 70em;
+            position: fixed;
+            bottom: 5%;
+            left: 16%;
+        }
+
+        /*.glyphicon-heart-empty {
+            color: deeppink;
+            float: left;
+            font-size: 10em;
+            position: absolute;
+            top: 5%;
+            left: 42.5%;
+            }*/
+
+        .glyphicon-plus-sign {
+            font-size: 5em;
+            font-weight:100;
+            color: #25b8dc;
+            position: fixed;
+            top: 35.73%;
+            left: 44.88%;
+        }

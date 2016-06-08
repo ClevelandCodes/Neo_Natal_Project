@@ -1,0 +1,145 @@
+﻿@model NeoNatal1.Models.survey
+
+@{
+    ViewBag.Title = "Create";
+}
+<h1>Client's Name</h1>
+<div class="btn">
+    <p><span class="glyphicon glyphicon-home"></span></p>
+    <p><span class="glyphicon glyphicon-pencil"></span></p>
+    <p><span class="glyphicon glyphicon-ok"></span></p>
+</div>
+<h3>1. Enter the address of the mother's primary residence.</h3>
+<input type="number" name="q1" id="Q1_address"><br>
+
+<h3>2. Enter the zip-code of the mother's primary residence.</h3>
+<input type="number" name="q2" id="Q2_zip_code"><br>
+
+<h3>3. Please enter the mother's race.</h3>
+<input type="radio" name="q3" value="1" id="Q3_race_a">Non-Hispanic African American<br>
+<input type="radio" name="q3" value="2" id="Q3_race_b">Non-Hispanic White<br>
+<input type="radio" name="q3" value="3" id="Q3_race_c">Non-Hispanic Asian<br>
+<input type="radio" name="q3" value="4" id="Q3_race_d">Hispanic/Latino<br>
+<input type="radio" name="q3" value="5" id="Q3_race_e">Non-Hispanic Other<br>
+
+<h3>4. Please enter the mother's ward.</h3>
+<input type="number" name="q4" value="1" id="Q4_ward"><br>
+
+<h3>5. Is this your first child?</h3>
+<input type="radio" name="q5" value="1" id="Q5_first_child_a">Yes<br>
+<input type="radio" name="q5" value="2" id="Q5_first_child_b">No<br>
+<input type="radio" name="q5" value="3" id="Q5_first_child_c">Prefer not to comment/Unsure<br>
+
+<h3>6. Was your previous child(ren) delivered prematurely?</h3>
+<input type="radio" name="q5" value="1" id="Q6_prem_birth_a">Yes<br>
+<input type="radio" name="q5" value="2" id="Q6_prem_birth_b">No<br>
+<input type="radio" name="q5" value="3" id="Q6_prem_birth_c">Prefer not to comment/Unsure<br>
+
+<h3>7. What week of your pregnancy did you visit a prenatal healthcare professional?</h3>
+<h6>(If they have not visited a prenatal healthcare professional, enter 99)</h6>
+<input type="number" value="0" id="Q7_obgyn"><br>
+
+<h3>8. How old are you?</h3>
+<input type="number" value="0" id="Q8_age"><br>
+
+<h3>9. What is your stress level on a daily basis?</h3>
+<input type="radio" name="q9" value="1" id="Q9_stress_a">Very high stress<br>
+<input type="radio" name="q9" value="2" id="Q9_stress_b">Somewhat stressed<br>
+<input type="radio" name="q9" value="3" id="Q9_stress_c">Neutral<br>
+<input type="radio" name="q9"  value="4" id="Q9_stress_d">Somewhat relaxed<br>
+<input type="radio" name="q9"  value="5" id="Q9_stress_e">Very relaxed<br>
+
+<h3>10. Have you smoked a cigarette(used a tobacco product) in the last year?</h3>
+<input type="radio" name="q10" value="1" id="Q10_smoker_a">Yes<br>
+<input type="radio" name="q10" value="2" id="Q10_smoker_b">No<br>
+<input type="radio" name="q10" value="3" id="Q10_smoker_c">Prefer not to comment/Unsure<br>
+
+<h3>11. Does anyone in your family/household smoke cigarettes or use tobacco?</h3>
+<input type="radio" name="q11" value="1" id="Q11_fam_smoker_a">Yes<br>
+<input type="radio" name="q11" value="2" id="Q11_fam_smoker_b">No<br>
+<input type="radio" name="q11" value="3" id="Q11_fam_smoker_c">Prefer not to comment/Unsure<br>
+
+<h3>12. Have you drank alcohol in the last month?</h3>
+<input type="radio" name="q12" value="1" id="Q12_alcohol_a">Yes<br>
+<input type="radio" name="q12" value="2" id="Q12_alcohol_b">No<br>
+<input type="radio" name="q12" value="3" id="Q12_alcohol_c">Prefer not to comment/Unsure<br>
+
+<h3>13. Does anyone in your family/household drink alcohol on a weekly basis?</h3>
+<input type="radio" name="q13" value="1" id="Q13_fam_alcohol_a">Yes<br>
+<input type="radio" name="q13" value="2" id="Q13_fam_alcohol_b">No<br>
+<input type="radio" name="q13" value="3" id="Q13_fam_alcohol_c">Prefer not to comment/Unsure<br>
+
+<h3>14. Has anyone in your family used drugs other than tobacco and alcohol?</h3>
+<input type="radio" name="q14" value="1" id="Q14_fam_drugs_a">Yes<br>
+<input type="radio" name="q14" value="2" id="Q14_fam_drugs_b">No<br>
+<input type="radio" name="q14" value="3" id="Q14_fam_drugs_c">Prefer not to comment/Unsure<br>
+
+<h3>15. Have you used any drugs other than alcohol or tobacco in the last year?</h3>
+<input type="radio" name="q15" value="1" id="Q15_fam_drugs_a">Yes<br>
+<input type="radio" name="q15" value="2" id="Q15_fam_drugs_b">No<br>
+<input type="radio" name="q15" value="3" id="Q15_fam_drugs_c">Prefer not to comment/Unsure<br>
+
+<h3>16. Do you feel safe in your own home?</h3>
+<input type="radio" name="q16" value="1" id="Q16_safe_a">Yes<br>
+<input type="radio" name="q16" value="2" id="Q16_safe_b">No<br>
+<input type="radio" name="q16" value="3" id="Q16_safe_c">Unsure<br>
+
+<h3>17. Do you feel safe in your neighborhood?</h3>
+<input type="radio" name="q17" value="1" id="Q17_safe_nbhood_a">Yes<br>
+<input type="radio" name="q17" value="2" id="q17_safe_nbhood_b">No<br>
+<input type="radio" name="q17" value="3" id="q17_safe_nbhood_c">Prefer not to comment/Unsure<br>
+
+<h3>18. Do you currently have a chronic illness?</h3>
+<input type="radio" name="q18" value="1" id="Q18_illness_a">Yes<br>
+<input type="radio" name="q18" value="2" id="Q18_illness_b">No<br>
+<input type="radio" name="q18" value="3" id="Q18_illness_c">Prefer not to comment/Unsure<br>
+
+<h3>19. Do you have reliable transportation?</h3>
+<input type="radio" name="q19" value="1" id="Q19_transport_a">Yes<br>
+<input type="radio" name="q19" value="2" id="Q19_transport_b">No<br>
+<input type="radio" name="q19" value="3" id="Q19_transport_c">Unsure<br>
+
+<h3>20. Do you have reliable internet access in your home?</h3>
+<input type="radio" name="q20" value="1" id="Q20_internet_a">Yes<br>
+<input type="radio" name="q20" value="2" id="Q20_internet_b">No<br>
+<input type="radio" name="q20" value="3" id="Q20_internet_c">Unsure<br>
+
+<h3>21. Do you have mobile internet access?</h3>
+<input type="radio" name="q21" value="1" id="Q21_mob_internet_a">Yes<br>
+<input type="radio" name="q21" value="2" id="Q21_mob_internet_b">No<br>
+<input type="radio" name="q21" value="3" id="Q21_mob_internet_c">Unsure<br>
+
+<h3>22.Which of these would you say you eat on a daily basis?</h3>
+<input type="checkbox" value="1" id="Q22_diet_a">Red meat<br>
+<input type="checkbox" value="1" id="Q22_diet_b">White Meat<br>
+<input type="checkbox" value="1" id="Q22_diet_c">Fish<br>
+<input type="checkbox" value="1" id="Q22_diet_d">Vegetables<br>
+<input type="checkbox" value="1" id="Q22_diet_e">Fruit<br>
+<input type="checkbox" value="1" id="Q22_diet_f">Bread/Rice/Pasta/Potatoes(other carbohydrates)<br>
+<input type="checkbox" value="1" id="Q22_diet_g">Milk and other dairy products<br>
+<input type="checkbox" value="1" id="Q22_diet_h">Candy/Potato Chips/other junk food/high fat foods<br>
+
+<h3>23. Do you receive any government assistance?</h3>
+<input type="radio" name="q23" value="1" id="Q23_gov_assist_a">Yes<br>
+<input type="radio" name="q23" value="2" id="Q23_gov_assist_b">No<br>
+<input type="radio" name="q23" value="3" id="Q23_gov_assist_c">Unsure<br>
+
+<h3>24. What is your yearly household income?</h3>
+<input type="radio" name="q24" value="1" id="Q24_income_a">under $15,000<br>
+<input type="radio" name="q24" value="2" id="Q24_income_b">$15,000-$25,000<br>
+<input type="radio" name="q24" value="3" id="Q24_income_c">$25,000-$50,000<br>
+<input type="radio" name="q24" value="4" id="Q24_income_d">$50,000-$75,000<br>
+<input type="radio" name="q24" value="5" id="Q24_income_e">Above $75,000<br>
+<input type="radio" name="q24" value="6" id="Q24_income_f">Prefer not to comment/Unsure<br>
+
+<h3>25.What is the highest level of education you have completed?</h3>
+<input type="radio" name="q25" value="1" id="Q25_education_a">Less than high school diploma<br>
+<input type="radio" name="q25" value="2" id="Q25_education_b">High School Diploma<br>
+<input type="radio" name="q25" value="3" id="Q25_education_c">Some college but no degree<br>
+<input type="radio" name="q25" value="4" id="Q25_education_d">Technical Degree<br>
+<input type="radio" name="q25" value="5" id="Q25_education_e">Associates Degree<br>
+<input type="radio" name="q25" value="6" id="Q25_education_f">Bachelors Degree or Above<br>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
